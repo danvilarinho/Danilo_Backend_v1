@@ -2,9 +2,9 @@ package com.example.danilo.danilo_pfc.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
+
 import android.os.Bundle;
-import android.os.Parcelable;
+
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -13,10 +13,7 @@ import android.widget.Toast;
 
 import com.example.danilo.danilo_pfc.adapter.ImageAdapter;
 import com.example.danilo.danilo_pfc.R;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
+
 
 import static com.example.danilo.danilo_pfc.Utils.Util.ID_LETRA_SELECIONADA;
 

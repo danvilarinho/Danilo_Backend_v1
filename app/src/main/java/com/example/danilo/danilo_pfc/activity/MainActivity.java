@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
@@ -13,18 +11,17 @@ import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.example.danilo.danilo_pfc.R;
-import com.example.danilo.danilo_pfc.model.Letra;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import java.io.ByteArrayOutputStream;
 import java.util.List;
 import java.util.Locale;
+
+import static com.example.danilo.danilo_pfc.Utils.Util.GEN_PAR_HABILITAR_BD;
 
 public class MainActivity extends Activity implements TextToSpeech.OnInitListener {
 
@@ -44,6 +41,20 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /**
+         * Condição abaixo para integração com banco de dados
+         */
+        if(GEN_PAR_HABILITAR_BD == true)
+        {
+            
+        }
+        else{
+
+        }
+        /**
+         * Fim da condição de integração com banco de dados
+         */
 
         imageButtonFala = (ImageButton) findViewById(R.id.btn_fala);
         imageButtonNext = (ImageButton) findViewById(R.id.btn_next);
@@ -81,6 +92,8 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
 
     }
+
+
 
     public void reconhecimentoDeVozFicaEscutandoUsuarioPronunciarParaOReconhecimento(){
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);

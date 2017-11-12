@@ -2,7 +2,6 @@ package com.example.danilo.danilo_pfc.Utils;
 
 import android.content.Context;
 import android.content.res.AssetManager;
-import android.provider.Settings;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,13 +11,28 @@ import java.util.Properties;
  * Created by Danilo on 12/11/2017.
  */
 
+/**
+ * @class Classe contendo parametros para serem utilizados em demais classes.
+ */
 public class Util
 {
     public static final String ID_LETRA_SELECIONADA = "letraSelecionada";
     public static final String JSON_LETRAS = "jsonLetras";
     public static final String TABELA_LETRAS = "letras";
+    public static final int QUANTITY = 26;
+
+    /**
+     * General Parameter  responsável por habilitar integração com banco de dados
+     * @param false Desligado
+     * @param true Ligada
+     */
     public static final boolean GEN_PAR_HABILITAR_BD = false;
 
+    /**
+     * @param context context Application
+     * @param key chave a ser buscada nos properties
+     * @return Json
+     */
     public static String getProperty(Context context,int key)
     {
         String keyValue = Integer.toString(key);
