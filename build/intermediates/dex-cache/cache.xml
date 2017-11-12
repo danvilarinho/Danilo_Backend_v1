@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Deivi\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="C:\Users\Deivi\Downloads\Danilo_backend\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_d3a99cf99ea079dbb478a8d88c869bed579da8a9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Deivi\Downloads\Danilo_backend\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="28ef89cb36c53239d458e6efa2f9ce0be9197622">
+        <dex dex="C:\Users\Deivi\Downloads\Danilo_backend\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_425f7ba833e6683325809c3fcd94e1854cc8aec9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Deivi\Downloads\Danilo_backend\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\Deivi\Downloads\Danilo_backend\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_0663a1245bfc496ce8710004ed9597e9ca0dff1e\classes.dex" />
+    </item>
+
+</items>
