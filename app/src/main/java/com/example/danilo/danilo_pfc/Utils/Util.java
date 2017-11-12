@@ -27,6 +27,8 @@ public class Util
      * @param true Ligada
      */
     public static final boolean GEN_PAR_HABILITAR_BD = false;
+    public static final String ERROR_MESSAGE_ITG_DB = "ERRO AO TENTAR INTEGRAR COM BANCO DE DADOS!";
+    public static final String MESSAGE_SUCESSES_ITG_DB = "BANCO DE DADOS INTEGRADO";
 
     /**
      * @param context context Application

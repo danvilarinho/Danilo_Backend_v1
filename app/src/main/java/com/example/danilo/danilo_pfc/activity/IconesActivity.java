@@ -38,7 +38,7 @@ public class IconesActivity extends Activity {
 
         final String opt = getIntent().getStringExtra("opt");
 
-        Toast.makeText(getApplicationContext(), opt, Toast.LENGTH_SHORT).show();
+        
 
         imageButtonBack = (ImageButton)findViewById(R.id.btn_back);
         imageButtonBack.setOnClickListener(new View.OnClickListener() {

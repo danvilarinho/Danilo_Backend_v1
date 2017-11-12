@@ -15,7 +15,7 @@ public class CriarBanco extends SQLiteOpenHelper
 {
     private static final String NOME_BANCO = "banco276.db";
     private static final String ID = "_id";
-    private static final int VERSAO = 1;
+    private static final int VERSAO = 2;
 
     public CriarBanco(Context context){
         super(context, NOME_BANCO,null,VERSAO);
@@ -23,9 +23,9 @@ public class CriarBanco extends SQLiteOpenHelper
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE"+TABELA_LETRAS+"("
-                + ID + "integer primary key autoincrement,"
-                + JSON_LETRAS + "text"
+        String sql = "CREATE TABLE "+TABELA_LETRAS+"("
+                + ID + " integer primary key, "
+                + JSON_LETRAS + " text "
                 +")";
         db.execSQL(sql);
     }
@@ -34,7 +34,7 @@ public class CriarBanco extends SQLiteOpenHelper
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
-        db.execSQL("DROP TABLE IF EXISTS" + TABELA_LETRAS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABELA_LETRAS);
         onCreate(db);
     }
 

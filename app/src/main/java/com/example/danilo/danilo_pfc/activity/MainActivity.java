@@ -11,8 +11,10 @@ import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.danilo.danilo_pfc.R;
+import com.example.danilo.danilo_pfc.controllers.Controller;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
@@ -21,7 +23,9 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import java.util.List;
 import java.util.Locale;
 
+import static com.example.danilo.danilo_pfc.Utils.Util.ERROR_MESSAGE_ITG_DB;
 import static com.example.danilo.danilo_pfc.Utils.Util.GEN_PAR_HABILITAR_BD;
+import static com.example.danilo.danilo_pfc.Utils.Util.MESSAGE_SUCESSES_ITG_DB;
 
 public class MainActivity extends Activity implements TextToSpeech.OnInitListener {
 
@@ -47,10 +51,16 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
          */
         if(GEN_PAR_HABILITAR_BD == true)
         {
-            
-        }
-        else{
-
+            Controller controller = new Controller(getApplicationContext());
+            long i  = controller.populateTableLetra(getApplicationContext());
+            if(i == -1)
+            {
+                Toast.makeText(getApplicationContext(), ERROR_MESSAGE_ITG_DB, Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(), MESSAGE_SUCESSES_ITG_DB, Toast.LENGTH_SHORT).show();
+            }
         }
         /**
          * Fim da condição de integração com banco de dados
